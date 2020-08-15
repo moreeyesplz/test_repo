@@ -1,7 +1,5 @@
 name: test_action
-on:
-  issues:
-    types: [opened, deleted]
+on: [push]
 
 jobs:
   hello_world_job:
