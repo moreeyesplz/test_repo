@@ -1,4 +1,7 @@
-on: [commit_comment]
+name: test_action
+on:
+  issues:
+    types: [opened, deleted]
 
 jobs:
   hello_world_job:
