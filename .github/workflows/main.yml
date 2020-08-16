@@ -1,16 +1,11 @@
-name: test_action
+name: meep_scanner
 on: [push]
 
 jobs:
-  hello_world_job:
+  meep_scan:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: meep_scanner
     steps:
-    - name: Hello world action step
-      id: hello
-      uses: moreeyesplz/test_action@v1
+    - uses: moreeyesplz/meep_scanner@master
       with:
-        who-to-greet: 'Mona the Octocat'
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
