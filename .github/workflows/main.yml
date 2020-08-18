@@ -7,5 +7,3 @@ jobs:
     name: meep_scanner
     steps:
     - uses: moreeyesplz/meep_scanner@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
